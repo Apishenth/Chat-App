@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net4.7.2</TargetFramework>
+    <Nullable>enable</Nullable>
+	  <LangVersion>10.0</LangVersion>
+	  <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="uploadfile.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ChatServerInterface\ChatServerInterface.csproj" />
+    <ProjectReference Include="..\ChatServer\ChatServer.csproj" />
+    <ProjectReference Include="..\DataModels\DataModels.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.ServiceModel" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="uploadfile.jpg" />
+  </ItemGroup>
+
+</Project>

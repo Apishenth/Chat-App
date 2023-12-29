@@ -1,0 +1,28 @@
+﻿<Window x:Class="ChatClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChatClient"
+        mc:Ignorable="d"
+        Title="Login" Height="450" Width="800">
+
+    <Grid Background="#F5F5F5">
+
+        <!-- Centered container for login elements -->
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="416" Height="209">
+
+            <!-- Title -->
+            <TextBlock Text="User Login" FontSize="28" FontWeight="Bold" Foreground="#333" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+            <!-- Username label and input -->
+            <Label Content="Enter username:" Foreground="#666" />
+            <TextBox x:Name="txtUsername" Height="37" Padding="10" BorderBrush="#AAA" BorderThickness="1"/>
+
+            <!-- Login button -->
+            <Button Content="Login" Click="LoginButton_Click" Width="100" Height="40" Margin="0,20,0,0" Background="#4CAF50" Foreground="White"  BorderThickness="0" />
+
+        </StackPanel>
+
+    </Grid>
+</Window>

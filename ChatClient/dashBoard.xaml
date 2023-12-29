@@ -1,0 +1,44 @@
+﻿<Window x:Class="ChatClient.dashBoard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="dashBoard" Height="450" Width="800" Background="#F5F5F5">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Title -->
+        <Label x:Name="msg1" Content="" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="0" Grid.ColumnSpan="2" FontSize="36" Foreground="#333" />
+
+        <Rectangle Grid.Column="1" HorizontalAlignment="Left" Height="321" Margin="4,46,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Width="229" Fill="#FFD1D1D1" Opacity="0.255" Stroke="Black" StrokeThickness="0.5" RadiusY="50"/>
+
+
+        <!-- Available Chat Rooms Label and List -->
+        <Label x:Name="labelRoom" Content="Available Chat Rooms" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10" FontSize="18" Foreground="#666" Grid.Row="1" Grid.Column="0" />
+        <ScrollViewer x:Name="textRooms" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0" Width="420" Grid.Row="2" Grid.Column="0" Height="240">
+            <StackPanel x:Name="chatRoomPanel"></StackPanel>
+        </ScrollViewer>
+
+        <!-- New Chat Room TextBox and Label -->
+        <Label x:Name="labelNewRoom" Content="New Chat Room Name:" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10" FontSize="16" Foreground="#666" Grid.Row="1" Grid.Column="1" />
+        <TextBox x:Name="newChatRoomTextBox" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10,0" Width="213" Grid.Row="2" Grid.Column="1"/>
+
+        <!-- Create Button -->
+        <Button x:Name="BtnCreate" Content="CREATE" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,209,11,0" Width="120" Height="35" FontWeight="Bold" Background="#FF4CAF50" Foreground="White"  BorderThickness="0" Click="BtnCreate_Click" Grid.Row="2" Grid.Column="1" />
+
+        <!-- Private Messages Button -->
+        <Button Content="Private Messages" Name="btnPrivateMessages" Background="#FF4CAF50" FontWeight="Bold" Foreground="White" BorderThickness="0" Click="btnPrivateMessages_Click" Width="150" Height="30" Margin="71,9,12,11" Grid.Row="3" Grid.Column="1" />
+
+    </Grid>
+</Window>
